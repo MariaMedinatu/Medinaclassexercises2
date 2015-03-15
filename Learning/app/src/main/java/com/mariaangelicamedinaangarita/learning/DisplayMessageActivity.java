@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 import android.widget.TextView;
 
 
@@ -13,20 +14,31 @@ public class DisplayMessageActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
        super.onCreate(savedInstanceState);
+       setContentView(R.layout.activity_display_message);
        Intent intent = getIntent();
+
         String message = intent.getStringExtra(MyActivity.EXTRA_MESSAGE);
         String message2 = intent.getStringExtra(MyActivity.EXTRA_MESSAGE2);
         String message3 = intent.getStringExtra(MyActivity.EXTRA_MESSAGE3);
-        TextView textView = new TextView(this);
-        TextView textView2 = new TextView(this);
-        TextView textView3 = new TextView(this);
-        textView.setTextSize(40);
-        textView2.setTextSize(40);
-        textView3.setTextSize(40);
+        TextView textView = (TextView) findViewById(R.id.txtView1);
+        TextView textView2 = (TextView) findViewById(R.id.txtView2);
+
+
+        //TextView textView = new TextView(this);
+       // TextView textView2 = new TextView(this);
+       // TextView textView3 = new TextView(this);
+       // textView.setTextSize(40);
+      //  textView2.setTextSize(40);
+      //  textView3.setTextSize(40);
         textView.setText(message);
-        textView2.setText(message2);
-        textView3.setText(message3);
-        setContentView(textView);
+        textView2.setText(" becomes "+message2+" and goes to "+message3);
+
+
+        //setContentView(textView);
+        //setContentView(textView2);
+        //setContentView(textView3);
+
+
 
 
     }

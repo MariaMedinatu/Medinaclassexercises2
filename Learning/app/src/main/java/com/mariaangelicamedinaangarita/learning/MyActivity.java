@@ -54,19 +54,20 @@ public class MyActivity extends ActionBarActivity {
          EditText editText = (EditText) findViewById(R.id.edit_message);
          String message = editText.getText().toString();
          intent.putExtra(EXTRA_MESSAGE,message);
-         startActivity(intent);
+         //startActivity(intent);
 
-         Intent intent2 = new Intent (this, DisplayMessageActivity.class);
+         //Intent intent2 = new Intent (this, DisplayMessageActivity.class);
          EditText editText2 = (EditText) findViewById(R.id.edit_message2);
          String message2 = editText2.getText().toString();
-         intent2.putExtra(EXTRA_MESSAGE2,message2);
-         startActivity(intent2);
+         intent.putExtra(EXTRA_MESSAGE2,message2);
+         //startActivity(intent2);
 
-         Intent intent3 = new Intent (this, DisplayMessageActivity.class);
+         //Intent intent3 = new Intent (this, DisplayMessageActivity.class);
          EditText editText3 = (EditText) findViewById(R.id.edit_message3);
          String message3 = editText3.getText().toString();
-         intent3.putExtra(EXTRA_MESSAGE3,message3);
-         startActivity(intent3);
+         intent.putExtra(EXTRA_MESSAGE3,message3);
+
+         startActivity(intent);
 
 
 
